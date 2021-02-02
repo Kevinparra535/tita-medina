@@ -1,0 +1,24 @@
+@import "../Tokens/colors";
+@import "../Tokens/spacings";
+@import "../Tokens/typos";
+
+.band__buttons {
+  padding: $space_x3;
+  button {
+    padding: $space $space_x2;
+    margin: 0 $space;
+    border: none;
+    color: $color-oscuro;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    &.active {
+      color: $color-claro;
+      background-color: $color-primario;
+    }
+    &:hover {
+      color: $color-claro;
+      background-color: get-opacity($color-primario, 0.8);
+    }
+  }
+}

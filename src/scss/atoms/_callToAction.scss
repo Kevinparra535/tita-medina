@@ -1,0 +1,58 @@
+@import "./../tokens/colors";
+@import "./../tokens/spacings";
+@import "./../tokens/typos";
+
+.callToAction {
+  border: none;
+  @include callToActions;
+}
+
+.cancelButton {
+  padding: $space $space_x2;
+  margin: 0 auto;
+  border: none;
+  color: get-opacity($color-claro, 1);
+  background-color: $color-negative;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  img {
+    margin-right: $space;
+    width: 20px;
+  }
+  &:hover {
+    background-color: get-opacity($color-negative, 0.8);
+  }
+}
+
+.positiveButton {
+  padding: $space $space_x2;
+  border: none;
+  color: get-opacity($color-claro, 1);
+  background-color: $color-positive;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  img {
+    margin-right: $space;
+    width: 20px;
+  }
+  &:hover {
+    background-color: get-opacity($color-positive, 0.8);
+  }
+}
+
+.editButton {
+  padding: $space $space_x2;
+  margin: 0 auto;
+  border: none;
+  color: get-opacity($color-claro, 1);
+  background-color: $color-primario;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  img {
+    margin-right: $space;
+    width: 20px;
+  }
+  &:hover {
+    background-color: get-opacity($color-primario, 0.8);
+  }
+}

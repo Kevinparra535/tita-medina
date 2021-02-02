@@ -1,0 +1,121 @@
+@import "./../tokens/colors";
+@import "./../tokens/spacings";
+@import "./../tokens/typos";
+
+.header {
+  padding: $space $space_x2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: sticky;
+  z-index: 99;
+  top: 0px;
+  width: 100%;
+  font-family: $Fuente1;
+  background-color: get-opacity($color-claro, 1);
+  &__logo {
+    text-align: center;
+    text-decoration: none;
+    h1 {
+      display: none;
+    }
+    img {
+      width: 30px;
+    }
+  }
+  &__links {
+    display: flex;
+    align-items: center;
+    a {
+      padding: $space_half $space;
+      font-weight: $normal;
+      color: $color-oscuro;
+      &:hover {
+        text-decoration: none;
+        color: get-opacity($color-oscuro, 0.7);
+      }
+      img {
+        width: 20px;
+      }
+    }
+  }
+  @include media(tablet) {
+    padding: $space;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    &__logo {
+      text-align: center;
+      text-decoration: none;
+      h1 {
+        padding: $space_half 0;
+        display: inline;
+        color: $color-oscuro;
+        @include font-size($h3);
+      }
+    }
+    &__links {
+      a {
+        margin: 0 $space_half;
+      }
+      p {
+        display: inline;
+      }
+    }
+  }
+  @include media(desktop-s) {
+    padding: $space $space_x4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    width: 100%;
+    &__logo {
+      padding: $space $space_x4;
+      display: flex;
+      align-items: center;
+      img {
+        width: 180px;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    &__links {
+      padding: 0 $space_x4;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      a {
+        padding: $space_half $space_x2;
+        font-family: $Fuente2;
+        font-weight: $normal;
+        color: $color-oscuro;
+        @include font-size($p);
+        &:hover {
+          text-decoration: none;
+          color: $color-claro;
+          background-color: $color-primario;
+        }
+      }
+      img {
+        margin: 0 $space;
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      &--primary {
+        padding: $space $space_x2;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import "../Tokens/colors";
+@import "../Tokens/spacings";
+@import "../Tokens/typos";
+
+.band__list {
+  padding: $space_x3;
+  button {
+    padding: $space $space_x2;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    img {
+      width: 20px;
+      height: 20px;
+      object-fit: cover;
+    }
+    &:hover {
+      img {
+        opacity: .9;
+      }
+    }
+  }
+}
