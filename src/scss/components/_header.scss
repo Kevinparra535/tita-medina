@@ -3,44 +3,55 @@
 @import "./../tokens/typos";
 
 .header {
-  padding: $space $space_x2;
+  padding: $space $space_x3;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  position: sticky;
+  position: fixed;
   z-index: 99;
   top: 0px;
   width: 100%;
   font-family: $Fuente1;
   background-color: get-opacity($color-claro, 1);
   &__logo {
-    text-align: center;
-    text-decoration: none;
-    h1 {
-      display: none;
-    }
+    padding: $space 0;
+    display: flex;
+    align-items: center;
     img {
-      width: 30px;
+      width: 120px;
+    }
+    &:hover {
+      text-decoration: none;
     }
   }
   &__links {
     display: flex;
     align-items: center;
     a {
-      padding: $space_half $space;
-      font-weight: $normal;
+      display: none;
+      text-decoration: none;
       color: $color-oscuro;
-      &:hover {
-        text-decoration: none;
-        color: get-opacity($color-oscuro, 0.7);
-      }
-      &.active {
-        color: $color-claro;
-        background-color: $color-primario;
-      }
       img {
         width: 20px;
+      }
+    }
+    img {
+      margin: 0 $space;
+      width: 15px;
+      height: 15px;
+      object-fit: contain;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .header__menu {
+      display: inline-block;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      &:hover {
+        background-color: transparent;
       }
     }
   }
@@ -89,8 +100,14 @@
           cursor: pointer;
         }
       }
-      &--primary {
-        padding: $space $space_x2;
+      .header__menu {
+        display: block;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        &:hover {
+          background-color: transparent;
+        }
       }
     }
   }
@@ -121,12 +138,17 @@
       margin: 0;
       a {
         padding: $space_half $space_x2;
+        display: inline;
         font-family: $Fuente2;
         font-weight: $normal;
         color: $color-oscuro;
         @include font-size($p);
         &:hover {
           text-decoration: none;
+          color: $color-claro;
+          background-color: $color-primario;
+        }
+        &.active {
           color: $color-claro;
           background-color: $color-primario;
         }
@@ -140,9 +162,75 @@
           cursor: pointer;
         }
       }
-      &--primary {
-        padding: $space $space_x2;
+      .header__menu {
+        display: none;
       }
+    }
+  }
+}
+
+.responsive {
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 99;
+  top: 0;
+  .header__links {
+    padding: 0 $space_x4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    a {
+      padding: $space_x2 0;
+      display: block;
+      width: 100%;
+      text-align: center;
+      @include font-size($p);
+    }
+    img {
+      margin: $space_x2 0;
+    }
+  }
+  .header__menu {
+    position: absolute;
+    right: 11%;
+    top: 5px;
+    z-index: 99;
+  }
+  @include media(tablet){
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 99;
+    top: 0;
+    .header__links {
+      padding: 0 $space_x4;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 0;
+      a {
+        padding: $space_x2 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+      img {
+        margin: $space_x2 0;
+      }
+    }
+    .header__menu {
+      position: absolute;
+      right: 60px;
+      top: 6px;
+      z-index: 99;
     }
   }
 }

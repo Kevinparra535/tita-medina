@@ -3,12 +3,14 @@
 @import "./../tokens/typos";
 
 .footer {
-  padding: $space_x4;
+  padding: $space_x4 $space_x2;
   text-align: center;
   &__copy {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
+    width: 80%;
     font-weight: $normal;
     font-family: $Fuente2;
     text-transform: capitalize;
@@ -20,11 +22,36 @@
     }
   }
   &__links {
-    padding:  $space_x2;
+    padding: $space_x2;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-    width: 15%;
+    width: 50%;
+  }
+  @include media(desktop-s) {
+    padding: $space_x4;
+    &__copy {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: $normal;
+      font-family: $Fuente2;
+      text-transform: capitalize;
+      letter-spacing: 5px;
+      color: get-opacity($color-oscuro, 0.6);
+      @include font-size($p);
+      span {
+        color: $color-primario;
+      }
+    }
+    &__links {
+      padding: $space_x2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 auto;
+      width: 15%;
+    }
   }
 }

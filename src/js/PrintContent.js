@@ -4,7 +4,6 @@ class PrintContent {
   fetchData(data) {
     data.forEach((item) => {
       let itemHTML = this.print(item.title, item.thumbnail, item.type);
-      console.log(itemHTML);
       worksHTML.innerHTML += itemHTML;
     });
   }

@@ -10,10 +10,11 @@
   height: 90vh;
   background-color: $color-primario;
   background-image: url("../static/hero__banner.webp");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: right;
   background-attachment: fixed;
+  opacity: 0.9;
   &__copy {
     font-family: $Fuente2;
     text-align: center;
@@ -21,11 +22,11 @@
     h1 {
       letter-spacing: 8px;
       text-transform: uppercase;
-      @include font-size($h1);
+      @include font-size($h3);
     }
     p {
       margin: $space_x2 auto;
-      width: 50%;
+      width: 90%;
       @include font-size($p);
     }
     a {
@@ -38,6 +39,88 @@
       &:hover {
         color: $color-primario;
         background-color: get-opacity($color-claro, 0.8);
+      }
+    }
+  }
+  @include media(tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 80vh;
+    background-color: $color-primario;
+    background-image: url("../static/hero__banner.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    &__copy {
+      font-family: $Fuente2;
+      text-align: center;
+      color: $color-claro;
+      h1 {
+        letter-spacing: 8px;
+        text-transform: uppercase;
+        @include font-size($h1);
+      }
+      p {
+        margin: $space_x2 auto;
+        width: 50%;
+        @include font-size($p);
+      }
+      a {
+        margin-top: $space;
+        padding: $space $space_x2;
+        width: 250px;
+        text-decoration: none;
+        color: $color-primario;
+        background-color: $color-claro;
+        &:hover {
+          color: $color-primario;
+          background-color: get-opacity($color-claro, 0.8);
+        }
+      }
+    }
+  }
+  @include media(desktop-s) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    background-color: $color-primario;
+    background-image: url("../static/hero__banner.webp");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
+    &__copy {
+      font-family: $Fuente2;
+      text-align: center;
+      color: $color-claro;
+      h1 {
+        letter-spacing: 8px;
+        text-transform: uppercase;
+        @include font-size($h1);
+      }
+      p {
+        margin: $space_x2 auto;
+        width: 50%;
+        @include font-size($p);
+      }
+      a {
+        margin-top: $space;
+        padding: $space $space_x2;
+        width: 250px;
+        text-decoration: none;
+        color: $color-primario;
+        background-color: $color-claro;
+        &:hover {
+          color: $color-primario;
+          background-color: get-opacity($color-claro, 0.8);
+        }
       }
     }
   }

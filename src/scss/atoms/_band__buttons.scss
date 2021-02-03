@@ -3,15 +3,20 @@
 @import "../Tokens/typos";
 
 .band__buttons {
-  padding: $space_x3;
+  padding: $space_x2 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   button {
-    padding: $space $space_x2;
-    margin: 0 $space;
+    padding: $space_half $space;
+    margin: $space_half;
     border: none;
     color: $color-oscuro;
     background-color: transparent;
     outline: none;
     cursor: pointer;
+    @include font-size($p);
     &.active {
       color: $color-claro;
       background-color: $color-primario;
@@ -19,6 +24,26 @@
     &:hover {
       color: $color-claro;
       background-color: get-opacity($color-primario, 0.8);
+    }
+  }
+  @include media(desktop-s) {
+    padding: $space_x3;
+    button {
+      padding: $space $space_x2;
+      margin: 0 $space;
+      border: none;
+      color: $color-oscuro;
+      background-color: transparent;
+      outline: none;
+      cursor: pointer;
+      &.active {
+        color: $color-claro;
+        background-color: $color-primario;
+      }
+      &:hover {
+        color: $color-claro;
+        background-color: get-opacity($color-primario, 0.8);
+      }
     }
   }
 }
