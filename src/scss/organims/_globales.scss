@@ -1,4 +1,3 @@
-
 @import "../Tokens/colors";
 @import "../Tokens/spacings";
 @import "../Tokens/typos";
@@ -68,13 +67,16 @@
 
 @mixin callToActions {
 	padding: $space $space_x2;
-	margin: 0 auto;
-	color: get-opacity($color-claro, 1) !important;
-	background-color: $color-bg-oscuro;
-	transition: 0.5s ease-in-out;
+	margin: $space auto;
+	width: 250px;
+	text-decoration: none;
+	border: none;
+	color: $color-claro;
+	background-color: $color-primario;
+	cursor: pointer;
 	&:hover {
-		cursor: pointer;
-		background-color: get-opacity($color-primario, 1);
+		color: $color-claro;
+		background-color: get-opacity($color-primario, 0.8);
 	}
 }
 

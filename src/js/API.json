@@ -1,52 +1,80 @@
 [
   {
+    "id": 1,
     "title": "N U D E",
     "type": "Branding",
     "thumbnail": "https://image.freepik.com/psd-gratis/elegante-maqueta-coleccion-folletos-sombra-botanica_1361-2630.jpg"
   },
   {
+    "id": 2,
     "title": "Just Place",
     "type": "Web",
     "thumbnail": "https://image.freepik.com/psd-gratis/diseno-mock-up-pantalla-portatil_1277-8.jpg"
   },
   {
+    "id": 3,
+    "title": "Rappi",
+    "type": "App",
+    "thumbnail": "https://image.freepik.com/foto-gratis/foto-mujer-atractiva-sorprendida-apunta-pantalla-vacia-blanco-dispositivo-moderno-mantiene-mandibula-caida-viste-ropa-amarilla_273609-25126.jpg"
+  },
+  {
+    "id": 4,
     "title": "Lorem Ipsum inc.",
     "type": "Branding",
     "thumbnail": "https://image.freepik.com/vector-gratis/elementos-papeleria-corporacion_23-2147566242.jpg"
   },
   {
+    "id": 5,
     "title": "Showcase",
     "type": "Web",
     "thumbnail": "https://image.freepik.com/psd-gratis/mock-up-pantalla-realista_1307-573.jpg"
   },
   {
+    "id": 6,
+    "title": "Spotify",
+    "type": "App",
+    "thumbnail": "https://image.freepik.com/foto-gratis/sonriendo_23-2148015172.jpg"
+  },
+  {
+    "id": 7,
     "title": "Alone",
     "type": "Photography",
     "thumbnail": "https://image.freepik.com/foto-gratis/tiro-angulo-alto-persona-lente-camara_181624-8502.jpg"
   },
   {
+    "id": 8,
     "title": "IBM",
     "type": "Web",
     "thumbnail": "https://image.freepik.com/psd-gratis/maqueta-tableta-realista-lapiz-optico-posicion-vertical-parece-vista-perspectiva-izquierda_15431-514.jpg"
   },
   {
+    "id": 9,
     "title": "Abstract",
     "type": "Photography",
     "thumbnail": "https://image.freepik.com/foto-gratis/tiro-angulo-escalera-metal-subiendo_181624-3631.jpg"
   },
   {
+    "id": 10,
     "title": "Past",
     "type": "Photography",
     "thumbnail": "https://image.freepik.com/foto-gratis/desarrollo-dispositivo-camara-vista-frontal_23-2148300494.jpg"
   },
   {
+    "id": 11,
     "title": "Community Manager",
     "type": "Photography",
     "thumbnail": "https://image.freepik.com/foto-gratis/sandwich-avena-almuerzo-o-cena_116380-25.jpg"
   },
   {
+    "id": 12,
     "title": "Brand",
     "type": "Branding",
     "thumbnail": "https://image.freepik.com/vector-gratis/plantilla-tarjeta-visita-minima-colorida_23-2148373393.jpg"
+  },
+  {
+    "id": 13,
+    "title": "Netflix",
+    "type": "App",
+    "thumbnail": "https://image.freepik.com/foto-gratis/telefono-movil_23-2148015028.jpg"
   }
 ]

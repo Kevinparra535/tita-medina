@@ -4,6 +4,7 @@
 
 .works {
   padding: $space_x3;
+  text-align: center;
   &__band {
     display: flex;
     align-items: center;
@@ -11,7 +12,7 @@
     flex-direction: column;
   }
   &__grid {
-    margin: 0 auto;
+    margin: $space_x3 auto;
     width: 70%;
     column-count: 3;
     -webkit-column-gap: 1em;
@@ -86,21 +87,50 @@
 }
 
 .card:nth-child(2) {
-  height: 200px;
+  height: auto;
 }
 
 .card:nth-child(3) {
-  height: 150px;
+  height: auto;
 }
 
 .card:nth-child(4) {
-  height: 200px;
+  height: auto;
 }
 
 .card:nth-child(5) {
-  height: 400px;
+  height: 320px;
+  margin-bottom: 0;
 }
 
 .card:nth-child(6) {
+  height: auto;
+}
+
+.card:nth-child(7) {
+  height: auto;
+}
+
+.card:nth-child(8) {
+  height: auto;
+}
+
+.card:nth-child(9) {
+  height: 500px;
+  margin-bottom: 0;
+
+}
+.card:nth-child(10) {
+  height: auto;
+}
+.card:nth-child(11) {
+  height: auto;
+}
+.card:nth-child(12) {
+  height: auto;
+}
+
+.card:nth-child(13) {
+  height: 435px;
   margin-bottom: 0;
 }

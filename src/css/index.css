@@ -8,6 +8,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Questrial&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Questrial&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Questrial&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Questrial&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Questrial&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -478,7 +480,7 @@ h3 {
 body {
   font-family: "Montserrat";
   color: #707070;
-  background-color: #f2f2f2;
+  background-color: #ffffff;
 }
 
 .header {
@@ -517,6 +519,10 @@ body {
   text-decoration: none;
   color: rgba(112, 112, 112, 0.7);
 }
+.header__links a.active {
+  color: #ffffff;
+  background-color: #fc758c;
+}
 .header__links a img {
   width: 20px;
 }
@@ -531,22 +537,47 @@ body {
     width: 100%;
   }
   .header__logo {
-    text-align: center;
+    padding: 10px 40px;
+    display: flex;
+    align-items: center;
+  }
+  .header__logo img {
+    width: 180px;
+  }
+  .header__logo:hover {
     text-decoration: none;
   }
-  .header__logo h1 {
-    padding: 5px 0;
-    display: inline;
-    color: #707070;
-    font-size: 22px;
-    font-size: 1.375rem;
-    line-height: 2.0625rem;
+  .header__links {
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    margin: 0;
   }
   .header__links a {
-    margin: 0 5px;
+    padding: 5px 20px;
+    font-family: "Questrial", system-ui;
+    font-weight: 500;
+    color: #707070;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
-  .header__links p {
-    display: inline;
+  .header__links a:hover {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #fc758c;
+  }
+  .header__links img {
+    margin: 0 10px;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+  .header__links img:hover {
+    cursor: pointer;
+  }
+  .header__links--primary {
+    padding: 10px 20px;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -605,6 +636,35 @@ body {
   }
 }
 
+.footer {
+  padding: 40px;
+  text-align: center;
+}
+.footer__copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-family: "Questrial", system-ui;
+  text-transform: capitalize;
+  letter-spacing: 5px;
+  color: rgba(112, 112, 112, 0.6);
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.footer__copy span {
+  color: #fc758c;
+}
+.footer__links {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 15%;
+}
+
 .hero {
   display: flex;
   align-items: center;
@@ -612,6 +672,11 @@ body {
   width: 100%;
   height: 90vh;
   background-color: #fc758c;
+  background-image: url("../static/hero__banner.webp");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
 }
 .hero__copy {
   font-family: "Questrial", system-ui;
@@ -647,6 +712,7 @@ body {
 
 .works {
   padding: 30px;
+  text-align: center;
 }
 .works__band {
   display: flex;
@@ -655,7 +721,7 @@ body {
   flex-direction: column;
 }
 .works__grid {
-  margin: 0 auto;
+  margin: 30px auto;
   width: 70%;
   column-count: 3;
   column-gap: 1em;
@@ -727,22 +793,53 @@ body {
 }
 
 .card:nth-child(2) {
-  height: 200px;
+  height: auto;
 }
 
 .card:nth-child(3) {
-  height: 150px;
+  height: auto;
 }
 
 .card:nth-child(4) {
-  height: 200px;
+  height: auto;
 }
 
 .card:nth-child(5) {
-  height: 400px;
+  height: 320px;
+  margin-bottom: 0;
 }
 
 .card:nth-child(6) {
+  height: auto;
+}
+
+.card:nth-child(7) {
+  height: auto;
+}
+
+.card:nth-child(8) {
+  height: auto;
+}
+
+.card:nth-child(9) {
+  height: 500px;
+  margin-bottom: 0;
+}
+
+.card:nth-child(10) {
+  height: auto;
+}
+
+.card:nth-child(11) {
+  height: auto;
+}
+
+.card:nth-child(12) {
+  height: auto;
+}
+
+.card:nth-child(13) {
+  height: 435px;
   margin-bottom: 0;
 }
 
@@ -782,5 +879,71 @@ body {
 }
 .band__buttons button:hover {
   color: #ffffff;
+  background-color: rgba(252, 117, 140, 0.8);
+}
+
+.callToAction {
+  border: none;
+  padding: 10px 20px;
+  margin: 10px auto;
+  width: 250px;
+  text-decoration: none;
+  border: none;
+  color: #ffffff;
+  background-color: #fc758c;
+  cursor: pointer;
+}
+.callToAction:hover {
+  color: #ffffff;
+  background-color: rgba(252, 117, 140, 0.8);
+}
+
+.cancelButton {
+  padding: 10px 20px;
+  margin: 0 auto;
+  border: none;
+  color: white;
+  background-color: #f44336;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.cancelButton img {
+  margin-right: 10px;
+  width: 20px;
+}
+.cancelButton:hover {
+  background-color: rgba(244, 67, 54, 0.8);
+}
+
+.positiveButton {
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  background-color: #04bf42;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.positiveButton img {
+  margin-right: 10px;
+  width: 20px;
+}
+.positiveButton:hover {
+  background-color: rgba(4, 191, 66, 0.8);
+}
+
+.editButton {
+  padding: 10px 20px;
+  margin: 0 auto;
+  border: none;
+  color: white;
+  background-color: #fc758c;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.editButton img {
+  margin-right: 10px;
+  width: 20px;
+}
+.editButton:hover {
   background-color: rgba(252, 117, 140, 0.8);
 }

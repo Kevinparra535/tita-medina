@@ -35,6 +35,10 @@
         text-decoration: none;
         color: get-opacity($color-oscuro, 0.7);
       }
+      &.active {
+        color: $color-claro;
+        background-color: $color-primario;
+      }
       img {
         width: 20px;
       }
@@ -49,21 +53,44 @@
     flex-wrap: wrap;
     width: 100%;
     &__logo {
-      text-align: center;
-      text-decoration: none;
-      h1 {
-        padding: $space_half 0;
-        display: inline;
-        color: $color-oscuro;
-        @include font-size($h3);
+      padding: $space $space_x4;
+      display: flex;
+      align-items: center;
+      img {
+        width: 180px;
+      }
+      &:hover {
+        text-decoration: none;
       }
     }
     &__links {
+      padding: 0 $space_x4;
+      display: flex;
+      align-items: center;
+      margin: 0;
       a {
-        margin: 0 $space_half;
+        padding: $space_half $space_x2;
+        font-family: $Fuente2;
+        font-weight: $normal;
+        color: $color-oscuro;
+        @include font-size($p);
+        &:hover {
+          text-decoration: none;
+          color: $color-claro;
+          background-color: $color-primario;
+        }
       }
-      p {
-        display: inline;
+      img {
+        margin: 0 $space;
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      &--primary {
+        padding: $space $space_x2;
       }
     }
   }
