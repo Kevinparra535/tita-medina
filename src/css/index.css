@@ -654,6 +654,97 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+.works__grid {
+  margin: 0 auto;
+  width: 70%;
+  column-count: 3;
+  column-gap: 1em;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  margin: 1rem 0 1rem 0;
+  width: 100%;
+  height: 300px;
+  color: white;
+  background-color: Gainsboro;
+  cursor: pointer;
+}
+.card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: #fc758c;
+  transition: 0.5s ease;
+}
+.card__overlay--text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  font-size: 20px;
+  text-align: center;
+  color: #ffffff;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.card p {
+  font-family: "Montserrat";
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.card hr {
+  width: 100%;
+  border: 2px solid #ffffff;
+  border-radius: 30px;
+  background-color: #ffffff;
+}
+.card:hover .card__overlay {
+  opacity: 1;
+}
+
+.card:nth-child(1) {
+  margin-top: 0;
+  height: auto;
+}
+
+.card:nth-child(2) {
+  height: 200px;
+}
+
+.card:nth-child(3) {
+  height: 150px;
+}
+
+.card:nth-child(4) {
+  height: 200px;
+}
+
+.card:nth-child(5) {
+  height: 400px;
+}
+
+.card:nth-child(6) {
+  margin-bottom: 0;
+}
 
 .band__list {
   padding: 30px;
